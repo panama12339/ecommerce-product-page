@@ -90,7 +90,7 @@ smallImages.forEach(smallImage => {
     });
 });
 
-// Agrega este código en tu archivo script.js
+// lightbox
 const lightbox = document.getElementById('light')
 const lightboxBigImage = document.getElementById('lightbox-big-image');
 const lightboxPrevButton = document.getElementById('lightbox-prev-button');
