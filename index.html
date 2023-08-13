@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,16 +31,17 @@
           <a href="#">sneakers</a>
         </div>
         <nav>
-          <ul>
+          <ul id="nav-list">
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
+          <div id="indicator"></div>
         </nav>
         <div class="move">
-          <div class="buy">
+          <div class="buy" id="cart-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
           <div class="user">
@@ -52,19 +53,40 @@
           </div>
           -->
         </div>
+        <div class="cart-popup" id="cart-popup">
+          <h1>Cart</h1>
+          <hr />
+          <p id="cart-quantity">You car is empty</p>
+        </div>
       </header>
       <div class="line"></div>
     </div>
     <div class="content">
       <div class="container-images">
         <div class="image-big">
-          <img src="images/image-product-1.jpg" alt="" />
+          <img src="images/image-product-1.jpg" alt="" id="big-image" />
         </div>
         <div class="images-small">
-          <img src="images/image-product-1-thumbnail.jpg" alt="" />
-          <img src="images/image-product-2-thumbnail.jpg" alt="" />
-          <img src="images/image-product-3-thumbnail.jpg" alt="" />
-          <img src="images/image-product-4-thumbnail.jpg" alt="" />
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
         </div>
       </div>
       <div class="text">
@@ -80,15 +102,56 @@
 
         <div class="button-buy">
           <div class="cant">
-            <i class="fa-solid fa-minus"></i>0<i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-minus" id="minus-icon"></i>
+            <p id="quantity">0</p>
+            <i class="fa-solid fa-plus" id="plus-icon"></i>
           </div>
-          <button><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+          <button id="add-to-cart">
+            <i class="fa-solid fa-cart-shopping"></i>Add to cart
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Agrega este código en tu HTML, al final del body -->
+    <div class="lightbox" id="light">
+      <div class="lightbox-content">
+        <div class="image-big">
+          <img src="" alt="" id="lightbox-big-image" />
+          <div id="lightbox-prev-button" class="nav-button">
+            <i class="fa-solid fa-arrow-right" id="left"></i>
+          </div>
+          <div id="lightbox-next-button" class="nav-button">
+            <i class="fa-solid fa-arrow-left" id="right"></i>
+          </div>
+          <div id="lightbox-close-button" class="close-button">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+        <div class="images-small">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+            class="small-image"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
   </body>
 </html>
-<!--  
-  0
-  
-  |||||                    -->

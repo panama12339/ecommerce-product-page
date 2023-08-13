@@ -50,6 +50,17 @@
     transition: .5s;
     text-decoration: none;
 }
+a:hover {
+    color: #66ccff;
+  }
+#indicator {
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: var(--orange);
+    bottom: 0;
+    transition: width 0.3s, left 0.3s;
+  }
 .container-header header .move{
     display: flex;
     align-items: center;
@@ -75,17 +86,21 @@
     width: 350px;
     height: 350px;
     border-radius: 60px;
+    cursor: pointer;
+    position: relative;
 }
 .images-small{
     width: 350px;
     display: flex;
     margin-left: 50px;
     justify-content: space-between;
+    
 }
 .images-small img{
     width: 70px;
     height: 70px;
     border-radius: 15px;
+    cursor: pointer;
 }
 .text{
     margin-top: 90px;
@@ -150,4 +165,119 @@
 }
 .button-buy button i{
     margin-right: 15px;
+}
+.cart-popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 110px;
+    width: 200px;
+    height: 150px;
+    
+}
+.cart-popup.active {
+    display: block;
+  }
+.cart-popup h1{
+    font-size: 15px;
+    font-family: 'Kumbh Sans';
+  }
+.cart-popup p{
+    padding: 40px;
+}
+
+.buy{
+    cursor: pointer;
+}
+.buy:hover{
+    color: var(--orange);
+}
+.user img{
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+  }
+#next-button{
+    margin-left: 430px;
+}
+
+
+/* Agrega este código en tu archivo de estilos */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    
+  }
+  
+  .lightbox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+
+  }
+  
+  
+.lightbox .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+.lightbox .images-small{
+    width: 2px;
+    height: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 16px;
+}
+.lightbox .images-small img{
+    margin-right: 20px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    color: var(--orange);
+  }
+#left{
+    margin-left: 390px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    
+}
+#right{
+    margin-left: 35px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    
 }
